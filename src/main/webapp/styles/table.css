@@ -1,0 +1,124 @@
+table {
+    border-spacing: 1px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+
+    * {
+        position: relative;
+    }
+
+    td, th {
+        text-align: center;
+    }
+
+    thead tr {
+        height: 60px;
+        background: #FFED86;
+        font-size: 16px;
+    }
+
+    tbody tr {
+        height: 48px;
+        border-bottom: 1px solid #E3F1D5;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    td, th {
+        text-align: center;
+
+        &.l {
+            text-align: center;
+        }
+
+        &.c {
+            text-align: center;
+        }
+
+        &.r {
+            text-align: center;
+        }
+    }
+}
+
+@media #{$gl-xs} {
+
+    table {
+
+        display: block;
+
+        > *, tr, td, th {
+            display: block;
+            text-align: center;
+        }
+
+        thead {
+            display: none;
+        }
+
+        tbody tr {
+            height: auto;
+            padding: 8px 0;
+
+            td {
+                margin-bottom: 12px;
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:before {
+                    position: absolute;
+                    font-weight: 700;
+                    width: 40%;
+                    left: 10px;
+                    top: 0
+                }
+
+                &:nth-child(1):before {
+                    content: "Code";
+                }
+
+                &:nth-child(2):before {
+                    content: "Stock";
+                }
+
+                &:nth-child(3):before {
+                    content: "Cap";
+                }
+
+                &:nth-child(4):before {
+                    content: "Inch";
+                }
+
+                &:nth-child(5):before {
+                    content: "Box Type";
+                }
+            }
+        }
+
+        th {
+            text-align: center;
+        }
+    }
+}
+
+body {
+    background: #9BC86A;
+    font: 400 14px 'Calibri', 'Arial';
+    padding: 20px;
+}
+
+blockquote {
+    color: white;
+    text-align: center;
+}
